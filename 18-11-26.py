@@ -1,9 +1,9 @@
 import asyncio
 async def main():
-  task=asyncio.cr_task(fn2())
+  task=asyncio.create_task(fn2())
   print(1)
   print(4)
-  await asyncio.sleep(3)
+  await asyncio.sleep(6)
   print(5)
   await asyncio.sleep(1)
 
@@ -12,3 +12,5 @@ async def fn2():
   print(2)
   await asyncio.sleep(3)
   print(3)
+
+asyncio.run(main())
